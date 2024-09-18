@@ -12,7 +12,7 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         additionalData: `
-          @import "${pathSrc}/assets/style.scss";
+          @import "${pathSrc}/assets/styles/index.scss";
         `,
       },
     },
