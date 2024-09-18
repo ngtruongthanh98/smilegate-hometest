@@ -33,7 +33,7 @@ export default {
 <style scoped lang="scss">
 .image-card-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 36px;
 }
 </style>

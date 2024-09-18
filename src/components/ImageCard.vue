@@ -35,13 +35,14 @@ export default {
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 16px;
-  max-width: 300px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: $white;
+  width: 100%;
+  max-width: 300px;
 
   &__image-container {
     width: 100%;
-    padding-top: 66.67%;
+    padding-top: 66.67%; /* 3:2 aspect ratio */
     position: relative;
   }
 
@@ -63,6 +64,25 @@ export default {
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 100%;
+  }
+}
+
+/* Responsive styles */
+@media (min-width: 600px) {
+  .image-card {
+    max-width: 300px;
+  }
+}
+
+@media (min-width: 900px) {
+  .image-card {
+    max-width: 250px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .image-card {
+    max-width: 200px;
   }
 }
 </style>
