@@ -4,6 +4,7 @@
 
 import { ref } from 'vue';
 import Navbar from './components/Navbar.vue';
+import HeaderTitle from './components/HeaderTitle.vue';
 import ImageCardList from './components/ImageCardList.vue';
 
 const imageData = ref([
@@ -32,6 +33,7 @@ const imageData = ref([
 
 <template>
   <Navbar/>
+  <HeaderTitle title="Photo Cards:" />
   <ImageCardList :images="imageData" />
 </template>
 
