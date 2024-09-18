@@ -71,18 +71,30 @@ export default {
 @media (min-width: 600px) {
   .image-card {
     max-width: 300px;
+
+    &__title {
+      font-size: 1.6em;
+    }
   }
 }
 
 @media (min-width: 900px) {
   .image-card {
     max-width: 250px;
+
+    &__title {
+      font-size: 1.4em;
+    }
   }
 }
 
 @media (min-width: 1200px) {
   .image-card {
     max-width: 200px;
+
+    &__title {
+      font-size: 1.2em;
+    }
   }
 }
 </style>
