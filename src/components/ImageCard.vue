@@ -37,8 +37,6 @@ export default {
   padding: 16px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: $white;
-  width: 100%;
-  max-width: 300px;
 
   &__image-container {
     width: 100%;
@@ -70,8 +68,6 @@ export default {
 /* Responsive styles */
 @media (min-width: 600px) {
   .image-card {
-    max-width: 300px;
-
     &__title {
       font-size: 1.6em;
     }
@@ -80,8 +76,6 @@ export default {
 
 @media (min-width: 900px) {
   .image-card {
-    max-width: 250px;
-
     &__title {
       font-size: 1.4em;
     }
@@ -90,8 +84,6 @@ export default {
 
 @media (min-width: 1200px) {
   .image-card {
-    max-width: 200px;
-
     &__title {
       font-size: 1.2em;
     }
