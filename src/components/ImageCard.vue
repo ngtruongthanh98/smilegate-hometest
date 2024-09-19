@@ -3,7 +3,7 @@
     <div class="image-card__image-container">
       <img :src="imageSrc" :alt="imageAlt" class="image-card__image" />
     </div>
-    <h3 class="image-card__title">{{ title }}</h3>
+    <div class="image-card__title">{{ title }}</div>
   </div>
 </template>
 
@@ -52,9 +52,11 @@ export default {
   }
 
   &__title {
-    margin-top: 12px;
-    font-size: 1.2em;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-size: 1.4em;
     color: #333;
+    font-weight: bold;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -66,7 +68,7 @@ export default {
 @media (min-width: 600px) {
   .image-card {
     &__title {
-      font-size: 1.6em;
+      font-size: 1.2em;
     }
   }
 }
@@ -74,7 +76,7 @@ export default {
 @media (min-width: 900px) {
   .image-card {
     &__title {
-      font-size: 1.4em;
+      font-size: 1.0em;
     }
   }
 }
@@ -82,7 +84,7 @@ export default {
 @media (min-width: 1200px) {
   .image-card {
     &__title {
-      font-size: 1.2em;
+      font-size: 0.8em;
     }
   }
 }

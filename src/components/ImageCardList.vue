@@ -35,6 +35,6 @@ export default {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 16px;
-  padding: 16px;
+  margin-top: 16px;
 }
 </style>

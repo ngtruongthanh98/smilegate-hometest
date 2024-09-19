@@ -19,7 +19,6 @@ export default {
 <style scoped lang="scss">
 .header-title {
   text-align: left;
-  padding: 16px;
 
   h1 {
     margin: 0;

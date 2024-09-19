@@ -46,9 +46,9 @@ export default {
 
 <style scoped lang="scss">
 .body-container {
-  padding: 16px;
-  margin-left: 32px;
-  margin-right: 32px;
+  margin-top: 16px;
+  margin-left: 88px;
+  margin-right: 88px;
   border-radius: 8px;
 }
 </style>
