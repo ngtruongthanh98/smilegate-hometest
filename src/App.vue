@@ -10,4 +10,10 @@ import BodyContainer from './components/BodyContainer.vue';
 
 <style lang="scss" scoped>
 @import './assets/styles/index.scss';
+
+
+body {
+  margin: 0 !important;
+}
+
 </style>
