@@ -33,8 +33,6 @@ export default {
   flex-direction: column;
   align-items: center;
   border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 16px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: $white;
 
@@ -51,7 +49,6 @@ export default {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 8px;
   }
 
   &__title {
