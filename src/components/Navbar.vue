@@ -54,6 +54,7 @@ export default defineComponent({
 
 .navbar-left .logo {
   height: 25px;
+  cursor: pointer;
 }
 
 .navbar-right {

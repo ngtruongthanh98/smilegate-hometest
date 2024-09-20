@@ -29,6 +29,14 @@ export default {
   border: 1px solid white;
   color: white;
   background: transparent;
+  transition: background-color 0.3s, border-color 0.3s;
+
+  &:hover {
+  background-color: white;
+  color: #333;
+  border-color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 }
 
 @media (min-width: 600px) {
