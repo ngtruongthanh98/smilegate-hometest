@@ -3,7 +3,10 @@
     <div class="image-card__image-container">
       <img :src="imageSrc" :alt="imageAlt" class="image-card__image" />
     </div>
-    <div class="image-card__title">{{ title }}</div>
+    <div class="image-card__title-container">
+      <div class="image-card__title">{{ title }}</div>
+      <div class="image-card__tooltip">{{ title }}</div>
+    </div>
   </div>
 </template>
 
@@ -34,7 +37,7 @@ export default {
   align-items: center;
   border: 1px solid #ddd;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: $white;
+  background-color: #fff;
 
   &:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -55,9 +58,14 @@ export default {
     object-fit: cover;
   }
 
+  &__title-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+  }
+
   &__title {
-    padding-top: 4px;
-    padding-bottom: 4px;
     font-size: 1.4em;
     color: #333;
     font-weight: bold;
@@ -65,6 +73,30 @@ export default {
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 100%;
+    cursor: pointer;
+  }
+
+  &__tooltip {
+    visibility: hidden;
+    width: auto;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    top: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+  }
+
+  &__title:hover + .image-card__tooltip {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(10px);
   }
 }
 
