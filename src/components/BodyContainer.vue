@@ -26,9 +26,14 @@ export default {
 
 <style scoped lang="scss">
 .body-container {
-  margin-top: 16px;
-  margin-left: 88px;
-  margin-right: 88px;
+  margin: 16px 88px;
   border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+  .body-container {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
 }
 </style>

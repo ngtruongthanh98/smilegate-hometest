@@ -48,16 +48,40 @@ export default defineComponent({
   justify-content: space-between;
   align-items: center;
   padding: 20px 88px;
-  background-color: #333;
+  background-color: #00cc99;
   color: $white;
 }
 
 .navbar-left .logo {
-  height: 40px;
+  height: 25px;
 }
 
 .navbar-right {
   display: flex;
   gap: 10px;
+}
+
+@media (min-width: 600px) {
+  .navbar-left .logo {
+    height: 30px;
+  }
+}
+
+@media (min-width: 900px) {
+  .navbar-left .logo {
+    height: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .navbar-left .logo {
+    height: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 33px;
+  }
 }
 </style>

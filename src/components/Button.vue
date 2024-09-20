@@ -1,5 +1,5 @@
 <template>
-  <button :class="buttonClass" @click="handleClick">
+  <button class="btn-outline" @click="handleClick">
     {{ buttonText }}
   </button>
 </template>
@@ -8,20 +8,9 @@
 export default {
   name: 'Button',
   props: {
-    type: {
-      type: String,
-      default: 'button'
-    },
     buttonText: {
       type: String,
       required: true
-    }
-  },
-  computed: {
-    buttonClass() {
-      return {
-        'btn': true
-      };
     }
   },
   methods: {
@@ -33,15 +22,30 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.btn {
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
 .btn-outline {
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
   border: 1px solid white;
   color: white;
   background: transparent;
+}
+
+@media (min-width: 600px) {
+  .btn-outline {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 900px) {
+  .btn-outline {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .btn-outline {
+    font-size: 20px;
+  }
 }
 </style>
