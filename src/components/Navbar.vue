@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import { defineComponent, ref } from 'vue';
+import { defineComponent, ref, onMounted, onBeforeUnmount } from 'vue';
 import Button from './Button.vue';
 
 export default defineComponent({
@@ -33,6 +33,18 @@ export default defineComponent({
     const toggleMenu = () => {
       isMenuOpen.value = !isMenuOpen.value;
     };
+
+    const handleResize = () => {
+      isMenuOpen.value = false;
+    };
+
+    onMounted(() => {
+      window.addEventListener('resize', handleResize);
+    });
+
+    onBeforeUnmount(() => {
+      window.removeEventListener('resize', handleResize);
+    });
 
     const handleIndieGameClick = () => {
       console.log('Indie Game button clicked');
@@ -78,6 +90,7 @@ export default defineComponent({
 .navbar-right {
   display: flex;
   gap: 10px;
+  margin-left: 24px;
 }
 
 .hamburger {
