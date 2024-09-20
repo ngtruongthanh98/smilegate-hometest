@@ -36,14 +36,17 @@ export default defineComponent({
 
     const handleIndieGameClick = () => {
       console.log('Indie Game button clicked');
+      isMenuOpen.value = false;
     };
 
     const handleEntryGameClick = () => {
       console.log('Entry Game button clicked');
+      isMenuOpen.value = false;
     };
 
     const handleCommunityClick = () => {
       console.log('Community button clicked');
+      isMenuOpen.value = false;
     };
 
     return {
