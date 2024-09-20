@@ -86,11 +86,26 @@ export default {
     padding: 5px;
     position: absolute;
     z-index: 1;
-    top: calc(100% + 5px);
+    top: calc(100% + 4px);
     left: 50%;
     transform: translateX(-50%);
     opacity: 0;
     transition: opacity 0.3s, transform 0.3s;
+  }
+
+  &__tooltip::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-bottom: 8px solid #555;
+    border-top: 8px solid transparent;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
   }
 
   &__title:hover + .image-card__tooltip {
