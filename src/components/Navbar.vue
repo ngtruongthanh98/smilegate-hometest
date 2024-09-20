@@ -63,13 +63,13 @@ export default defineComponent({
 
 @media (min-width: 600px) {
   .navbar-left .logo {
-    height: 30px;
+    height: 25px;
   }
 }
 
 @media (min-width: 900px) {
   .navbar-left .logo {
-    height: 30px;
+    height: 25px;
   }
 }
 
@@ -79,7 +79,7 @@ export default defineComponent({
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .navbar {
     padding: 33px;
   }

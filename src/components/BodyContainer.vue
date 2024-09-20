@@ -30,7 +30,7 @@ export default {
   border-radius: 8px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .body-container {
     margin-left: 30px;
     margin-right: 30px;

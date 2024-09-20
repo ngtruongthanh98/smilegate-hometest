@@ -33,7 +33,7 @@ export default {
 
 @media (min-width: 600px) {
   .btn-outline {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
