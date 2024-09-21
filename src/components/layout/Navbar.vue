@@ -9,7 +9,7 @@
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
       </button>
-      <div :class="['menu', { 'menu--open': isMenuOpen }]">
+      <div v-click-outside="handleCloseMenu" :class="['menu', { 'menu--open': isMenuOpen }]">
         <Button buttonText="Indie Game" @click="handleIndieGameClick" />
         <Button buttonText="Entry Game" @click="handleEntryGameClick" />
         <Button buttonText="Community" @click="handleCommunityClick" />
@@ -18,20 +18,28 @@
   </nav>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent, ref, onMounted, onBeforeUnmount } from 'vue';
 import Button from '../ui/Button.vue';
+import clickOutsideDirective from '../../directives/click-outside';
 
 export default defineComponent({
   name: 'Navbar',
   components: {
     Button
   },
+  directives: {
+    clickOutside: clickOutsideDirective
+  },
   setup() {
     const isMenuOpen = ref(false);
 
     const toggleMenu = () => {
       isMenuOpen.value = !isMenuOpen.value;
+    };
+
+    const handleCloseMenu = () => {
+      isMenuOpen.value = false;
     };
 
     const handleResize = () => {
@@ -64,6 +72,7 @@ export default defineComponent({
     return {
       isMenuOpen,
       toggleMenu,
+      handleCloseMenu,
       handleIndieGameClick,
       handleEntryGameClick,
       handleCommunityClick
@@ -150,7 +159,6 @@ export default defineComponent({
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     z-index: 9;
   }
-
 
   .menu--open {
     transform: translateX(0);
