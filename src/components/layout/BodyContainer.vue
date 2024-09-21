@@ -9,7 +9,7 @@
 import { defineComponent, ref, onMounted } from 'vue';
 import HeaderTitle from '../ui/HeaderTitle.vue';
 import ImageCardList from '../image/ImageCardList.vue';
-import { MOCK_DATA_PHOTO_LIST } from '../../constants';
+import { shuffledPhotoList } from '../../constants';
 
 interface Photo {
   id: number;
@@ -30,7 +30,7 @@ export default defineComponent({
     const fetchImageData = (): Promise<Photo[]> => {
       return new Promise((resolve) => {
         setTimeout(() => {
-          resolve(MOCK_DATA_PHOTO_LIST as unknown as Photo[]);
+          resolve(shuffledPhotoList as unknown as Photo[]);
         }, 1000);
       });
     };
