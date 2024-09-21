@@ -1,31 +1,39 @@
 <template>
   <div class="image-card-list">
-    <div v-if="isLoading">Loading...</div>
-    <ImageCard
-      v-else
-      v-for="(image, index) in images"
-      :key="index"
-      :imageSrc="image.src"
-      :imageAlt="image.alt"
-      :title="image.title"
-    />
+    <template v-if="isLoading">
+      <ImageCardSkeleton
+        v-for="index in 6"
+        :key="index"
+      />
+    </template>
+    <template v-else>
+      <ImageCard
+        v-for="(image, index) in images"
+        :key="index"
+        :imageSrc="image.src"
+        :imageAlt="image.alt"
+        :title="image.title"
+      />
+    </template>
   </div>
 </template>
 
 <script>
 import ImageCard from './ImageCard.vue';
+import ImageCardSkeleton from './ImageCardSkeleton.vue';
 
 export default {
   name: 'ImageCardList',
   components: {
-    ImageCard
+    ImageCard,
+    ImageCardSkeleton
   },
   props: {
     images: {
       type: Array,
       required: true,
       validator: (value) => {
-        return value.every(item => 'src' in item && 'title' in item);
+        return value.every(item => 'src' in item && 'title' in item && 'alt' in item);
       }
     },
     isLoading: {
