@@ -7,9 +7,9 @@
 
 <script lang="ts">
 import { defineComponent, ref, onMounted } from 'vue';
-import HeaderTitle from './HeaderTitle.vue';
-import ImageCardList from './ImageCardList.vue';
-import { MOCK_DATA_PHOTO_LIST } from '../constants';
+import HeaderTitle from '../ui/HeaderTitle.vue';
+import ImageCardList from '../image/ImageCardList.vue';
+import { MOCK_DATA_PHOTO_LIST } from '../../constants';
 
 interface Photo {
   id: number;
