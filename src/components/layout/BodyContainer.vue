@@ -12,8 +12,8 @@ import ImageCardList from '../image/ImageCardList.vue';
 import { shuffledPhotoList } from '../../constants';
 
 interface Photo {
-  id: number;
-  url: string;
+  src: string;
+  alt: string;
   title: string;
 }
 
@@ -38,7 +38,11 @@ export default defineComponent({
     onMounted(async () => {
       try {
         const data = await fetchImageData();
-        imageData.value = data;
+        imageData.value = data.map(photo => ({
+          src: photo.src,
+          alt: photo.alt,
+          title: photo.title
+        }));
       } catch (error) {
         console.error('Failed to load image data:', error);
       } finally {

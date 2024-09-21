@@ -18,9 +18,17 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { PropType } from 'vue';
 import ImageCard from './ImageCard.vue';
 import ImageCardSkeleton from './ImageCardSkeleton.vue';
+
+
+interface ImageData {
+  src: string;
+  title: string;
+  alt: string;
+}
 
 export default {
   name: 'ImageCardList',
@@ -30,9 +38,9 @@ export default {
   },
   props: {
     images: {
-      type: Array,
+      type: Array as PropType<ImageData[]>,
       required: true,
-      validator: (value) => {
+      validator: (value: Array<{ src: string, title: string, alt: string }>) => {
         return value.every(item => 'src' in item && 'title' in item && 'alt' in item);
       }
     },

@@ -4,8 +4,10 @@
   </button>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
   name: 'Button',
   props: {
     buttonText: {
@@ -13,12 +15,13 @@ export default {
       required: true
     }
   },
+  emits: ['click'],
   methods: {
-    handleClick(event) {
+    handleClick(event: Event) {
       this.$emit('click', event);
     }
   }
-};
+});
 </script>
 
 <style scoped lang="scss">
@@ -32,11 +35,11 @@ export default {
   transition: background-color 0.3s, border-color 0.3s;
 
   &:hover {
-  background-color: $white;
-  color: $text-dark;
-  border-color: $text-dark;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
+    background-color: $white;
+    color: $text-dark;
+    border-color: $text-dark;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 }
 
 @media (min-width: 600px) {

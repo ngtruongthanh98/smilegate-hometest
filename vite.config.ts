@@ -6,6 +6,7 @@ const pathSrc = resolve(__dirname, './src');
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/smilegate-hometest/',
   plugins: [vue()],
 
   css: {
