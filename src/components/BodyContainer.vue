@@ -1,7 +1,7 @@
 <template>
   <div class="body-container">
     <HeaderTitle title="Photo Cards:" />
-    <ImageCardList :images="imageData" />
+    <ImageCardList :images="imageData" :isLoading="isLoading" />
   </div>
 </template>
 
@@ -25,6 +25,7 @@ export default defineComponent({
   },
   setup() {
     const imageData = ref<Photo[]>([]);
+    const isLoading = ref<boolean>(true);
 
     const fetchImageData = (): Promise<Photo[]> => {
       return new Promise((resolve) => {
@@ -40,11 +41,14 @@ export default defineComponent({
         imageData.value = data;
       } catch (error) {
         console.error('Failed to load image data:', error);
+      } finally {
+        isLoading.value = false;
       }
     });
 
     return {
-      imageData
+      imageData,
+      isLoading
     };
   }
 });
