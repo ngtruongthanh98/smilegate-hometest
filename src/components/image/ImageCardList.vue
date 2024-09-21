@@ -2,7 +2,7 @@
   <div class="image-card-list">
     <template v-if="isLoading">
       <ImageCardSkeleton
-        v-for="index in 6"
+        v-for="index in 20"
         :key="index"
       />
     </template>
