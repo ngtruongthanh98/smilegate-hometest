@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar">
     <div class="navbar-left">
-      <img src="../assets/images/logo.png" alt="Logo" class="logo">
+      <img src="../../assets/images/logo.png" alt="Logo" class="logo">
     </div>
     <div class="navbar-right">
       <button class="hamburger" @click="toggleMenu">
@@ -20,7 +20,7 @@
 
 <script>
 import { defineComponent, ref, onMounted, onBeforeUnmount } from 'vue';
-import Button from './Button.vue';
+import Button from '../ui/Button.vue';
 
 export default defineComponent({
   name: 'Navbar',

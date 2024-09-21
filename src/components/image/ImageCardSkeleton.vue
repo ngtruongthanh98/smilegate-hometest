@@ -1,7 +1,7 @@
 <template>
   <div class="image-card-skeleton">
     <div class="image-card-skeleton__image-container">
-      <img class="image-card-skeleton__image" src="../assets/images/empty.png" alt="Loading..." />
+      <img class="image-card-skeleton__image" src="../../assets/images/empty.png" alt="Loading..." />
     </div>
     <div class="image-card-skeleton__title-container">
       <div class="image-card-skeleton__title"></div>
