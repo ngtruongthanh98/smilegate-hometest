@@ -23,7 +23,7 @@ export default {
   h1 {
     margin: 0;
     font-size: 2em;
-    color: #333;
+    color: $text-dark;
   }
 }
 </style>

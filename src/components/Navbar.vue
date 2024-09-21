@@ -78,7 +78,7 @@ export default defineComponent({
   justify-content: space-between;
   align-items: center;
   padding: 20px 88px;
-  background-color: #00cc99;
+  background-color: $primary-color;
   color: $white;
 }
 
@@ -110,7 +110,7 @@ export default defineComponent({
 .hamburger-line {
   width: 30px;
   height: 3px;
-  background: white;
+  background: $white;
   border-radius: 2px;
 }
 
@@ -141,7 +141,7 @@ export default defineComponent({
     top: 80px;
     right: 20px;
     width: 200px;
-    background-color: #00cc99;
+    background-color: $primary-color;
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);

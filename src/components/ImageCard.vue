@@ -35,9 +35,9 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid #ddd;
+  border: 1px solid $gray-dark;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background-color: $white;
 
   &:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -67,7 +67,7 @@ export default {
 
   &__title {
     font-size: 1.4em;
-    color: #333;
+    color: $text-dark;
     font-weight: bold;
     white-space: nowrap;
     overflow: hidden;
@@ -79,8 +79,8 @@ export default {
   &__tooltip {
     visibility: hidden;
     width: auto;
-    background-color: #555;
-    color: #fff;
+    background-color: $background-dark;
+    color: $white;
     text-align: center;
     border-radius: 6px;
     padding: 5px;
@@ -102,7 +102,7 @@ export default {
     transform: translateX(-50%);
     width: 0;
     height: 0;
-    border-bottom: 8px solid #555;
+    border-bottom: 8px solid $background-dark;
     border-top: 8px solid transparent;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
